@@ -22,9 +22,6 @@
   },
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
-    "@apidevtools/swagger-cli": "^4.0.4",
-    "@redocly/cli": "^1.0.0-beta.128",
-    "@stoplight/spectral": "^6.5.0",
-    "redoc-cli": "^0.13.20"
+    "@redocly/cli": "^1.0.0-beta.128"
   }
 }
