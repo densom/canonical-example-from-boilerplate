@@ -1,7 +1,7 @@
-openapi: "3.0.0"
+openapi: "3.0.2"
 info:
   version: 1.0.0
-  title: Swagger Petstore
+  title: Canonical Demo
   description: Multi-file boilerplate for OpenAPI Specification.
   license:
     name: MIT
@@ -10,18 +10,25 @@ info:
     url: http://www.example.com/support
     email: support@example.com
 servers:
-  - url: http://petstore.swagger.io/v1
+  - url: http://localhost:3000/v1
 tags:
-  - name: pets
+  - name: example
+    description: Example placeholder apis
+security:
+- app_id: []
 paths:
-  /pets:
-    $ref: "./resources/pets.yaml"
-  /pets/{petId}:
-    $ref: "./resources/pet.yaml"
+  /example:
+    $ref: "./resources/example.yaml"
 components:
-  parameters:
-    $ref: "./parameters/_index.yaml"
+  # parameters:
+  #   $ref: "./parameters/_index.yaml"
   schemas:
     $ref: "./schemas/_index.yaml"
-  responses:
-    $ref: "./responses/_index.yaml"
+  # responses:
+  #   $ref: "./responses/_index.yaml"
+  securitySchemes:
+    app_id:
+      type: apiKey
+      description: API key to authorize requests.
+      name: appid
+      in: query

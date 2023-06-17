@@ -1,0 +1,18 @@
+get:
+  summary: Placeholder
+  description: Placeholder for validation - using to show validation that must be greater than 30 characters.
+  operationId: example
+  tags:
+    - example
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/Contact.yaml'
+    '400':
+      $ref: "../responses/UnexpectedError.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+
